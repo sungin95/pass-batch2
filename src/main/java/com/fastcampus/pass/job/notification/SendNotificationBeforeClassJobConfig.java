@@ -100,7 +100,7 @@ public class SendNotificationBeforeClassJobConfig {
                 .build();
     }
 
-    Bean
+    @Bean
     public SynchronizedItemStreamReader<NotificationEntity> synchronizedItemStreamReader() {
         // 이벤트(event)가 수업 전이며, 발송 여부(sent)가 미발송인 알람이 조회 대상이 됩니다.
         JpaCursorItemReader<NotificationEntity> itemReader = new JpaCursorItemReaderBuilder<NotificationEntity>()
