@@ -21,12 +21,15 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
+dependencies { // 2.4.0+
     implementation 'org.springframework.boot:spring-boot-starter-batch'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // JPA
     implementation 'org.springframework.batch:spring-batch-integration' // AsyncItemProcessor, AsyncItemWriter
     implementation 'org.springframework.boot:spring-boot-starter-webflux' // WebClient
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor" // @ConfigurationProperties
+
+    // @ConfigurationProperties
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 
     // mysql
     runtimeOnly 'com.mysql:mysql-connector-j'
@@ -38,6 +41,7 @@ dependencies {
     // mapstruct
     implementation 'org.mapstruct:mapstruct:1.5.2.Final'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
+    annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
 
     // hibernate-types
     implementation 'com.vladmihalcea:hibernate-types-52:2.19.2'

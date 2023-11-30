@@ -14,6 +14,7 @@ CREATE TABLE `package`
     `modified_at`  timestamp            DEFAULT NULL COMMENT '수정 일시',
     PRIMARY KEY (`package_seq`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='패키지';
+
 CREATE TABLE `pass`
 (
     `pass_seq`        int         NOT NULL AUTO_INCREMENT COMMENT '이용권 순번',
@@ -58,6 +59,7 @@ CREATE TABLE `booking`
     `modified_at`  timestamp            DEFAULT NULL COMMENT '수정 일시',
     PRIMARY KEY (`booking_seq`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='예약';
+
 CREATE TABLE `user`
 (
     `user_id`     varchar(20) NOT NULL COMMENT '사용자 ID',
@@ -84,7 +86,7 @@ CREATE TABLE `user_group_mapping`
 CREATE TABLE `notification`
 (
     `notification_seq` int           NOT NULL AUTO_INCREMENT COMMENT '알람 순번',
-    `uuid`            varchar(20)   NOT NULL COMMENT '사용자 uuid (카카오톡)',
+    `uuid`             varchar(20)   NOT NULL COMMENT '사용자 uuid (카카오톡)',
     `event`            varchar(10)   NOT NULL COMMENT '이벤트',
     `text`             varchar(1000) NOT NULL COMMENT '알람 내용',
     `sent`             tinyint(1)    NOT NULL DEFAULT '0' COMMENT '발송 여부',
