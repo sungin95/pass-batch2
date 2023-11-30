@@ -1,6 +1,7 @@
 package com.fastcampus.pass.util;
 
-import com.vladmihalcea.hibernate.util.StringUtils;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -13,7 +14,9 @@ public class LocalDateTimeUtils {
 
     public static String format(final LocalDateTime localDateTime) {
         return localDateTime.format(YYYY_MM_DD_HH_MM);
+
     }
+
     public static String format(final LocalDateTime localDateTime, DateTimeFormatter formatter) {
         return localDateTime.format(formatter);
 

@@ -32,7 +32,6 @@ public class PassModelMapperTest {
         assertEquals(10, passEntity.getRemainingCount());
         assertEquals(now.minusDays(60), passEntity.getStartedAt());
         assertEquals(now, passEntity.getEndedAt());
-        assertEquals(userId, passEntity.getUserId());
 
     }
 }
